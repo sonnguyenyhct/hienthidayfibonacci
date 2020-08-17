@@ -5,24 +5,23 @@
     <title>Bài 1</title>
 </head>
 <body>
-<p>Hiển thị dãy fibonacci</p>
-<script>
-    let soluong = parseInt(prompt("Nhập số phần tử trong dãy : "));
-    let a = 0;
-    let b = 1;
-    let hienthi = "";
-    for ( let count = 0;count < (soluong/2); count++){
-            hienthi += a + " " + b + " ";
-            a += b;
-            b += a;
-    }
-    if (soluong%2 === 0){
-        document.write(hienthi);
-    }else if (soluong%2 === 1){
-        // cắt đoạn (b + " ") ở cuối chuỗi hienthi;
-        document.write(hienthi);
-    }
-
-</script>
+    <p>Hiển thị dãy fibonaci</p>
+    <script>
+        function fibonacci(n) {
+            if (n < -1){
+                return -1;
+            }else if (n === 0 || n === 1){
+                return n;
+            }else {
+                return fibonacci(n - 1) + fibonacci(n - 2);
+            }
+        }
+        let display = "";
+        let num = prompt("Nhập số phần tử trong dãy fibonacci : ");
+        for (let count = 0; count < num; count ++){
+            display += fibonacci(count) + " , ";
+        }
+        document.write(display);
+    </script>
 </body>
 </html>
