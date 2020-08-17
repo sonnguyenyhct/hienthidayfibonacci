@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<p>Hiển thị dãy fibonacci</p>
+<script>
+    let soluong = parseInt(prompt("Nhập số phần tử trong dãy : "));
+    let a = 0;
+    let b = 1;
+    let hienthi = "";
+    for ( let count = 0;count < (soluong/2); count++){
+            hienthi += a + " " + b + " ";
+            a += b;
+            b += a;
+    }
+    if (soluong%2 === 0){
+        document.write(hienthi);
+    }else if (soluong%2 === 1){
+        // cắt đoạn (b + " ") ở cuối chuỗi hienthi;
+        document.write(hienthi);
+    }
+
+</script>
+</body>
+</html>
